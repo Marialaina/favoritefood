@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/style.css">
+        <title></title>
+    </head>
+    <body class="meal">
+        <h3><%=meal.name; %></h3>
+        <img src="<%= meal.img %>" >
+        <p><%=meal.ingredients %> </p>
+        <% if(meal.cookedDish === true){ %>
+            Has been cooked
+        <% } else { %>
+           Hasn't been cooked
+        <% } %>
+
+        <nav>
+            <a href="/meals">Home</a>
+        </nav>
+    </body>
+</html>

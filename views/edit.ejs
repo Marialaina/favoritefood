@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Meal</h1>
+    <!--  NOTE: the form is pre-populated with values for the server-->
+    <form action="/meals/<%=meal.id%>?_method=PUT" method="POST">
+      Name:
+      <input type="text" name="name" value="<%= meal.name %>" /><br/><br />
+      Image:
+      <input type="text" name="img" value="<%= meal.img%>"/><br/>
+      Ingredients: 
+      <input type="text" name="ingredients" value="<%= meal.ingredients%>"/><br/>
+      Has Been Cooked:
+      <input type="checkbox" name="cookedDish" 
+        <% if (meal.cookedDish){ %>
+          checked 
+        <% } %> 
+      />
+      <br />
+      <br />
+      <input type="submit" name="" value="Submit Changes">
+    </form>
+  </body>
+</html>
