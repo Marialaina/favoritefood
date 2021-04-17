@@ -25,6 +25,10 @@ app.set(`view engine`, `ejs`);
 const HomeRouter = require("./routes/home.js");
 app.use("/", HomeRouter)
 
+app.get("/", (req, res) => {
+  res.redirect("/meals")
+});
+
 
 app.listen(PORT, () =>
   console.log("🚀 Server Launch 🚀", `Listening on Port ${PORT}`)
