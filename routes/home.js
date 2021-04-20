@@ -1,6 +1,4 @@
 const router = require("express").Router()
-//IMPORTING BCRYPT
-const bcrypt = require("bcryptjs");
 //IMPORTING MY MONGO DATABASE! :)
 const Meal = require(`../models/Meal`);
 
@@ -66,5 +64,5 @@ router.get(`/meals/:id`, (req, res) => {
     });
 });
 
-
+//this allows my routers to be used outside of this file
 module.exports = router
